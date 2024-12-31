@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Uwzglêdnia padding w szerokoœci i wysokoœci */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, #000000, #1c1c1c);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.title {
+    height: 10vh;
+    font-family: "Parisienne", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 8vh;
+    color: white;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    height: 55vh;
+    width: 100vw;
+}
+.widget {
+    width: 29vw;
+    height: 50vh;
+}
+
+.widget {
+    border: solid 3px white;
+    text-align: center;
+    background: #ffffff19;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px #09fcf9a6;
+    padding: 10px;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+}
+#movie-form-widget.edit-mode {
+    box-shadow: 0 4px 15px #987000b9; /* Pomarañczowy cieñ */
+    border: solid 3px #bd8e0a;
+}
+#tvseries-form-widget.edit-mode {
+    box-shadow: 0 4px 15px #987000b9; /* Pomarañczowy cieñ */
+    border: solid 3px #bd8e0a;
+}
+#book-form-widget.edit-mode {
+    box-shadow: 0 4px 15px #987000b9; /* Pomarañczowy cieñ */
+    border: solid 3px #bd8e0a;
+}
+    .widget h2 {
+        font-family: "Parisienne", serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3.5vh;
+        color: #ffff;
+        margin-bottom: 0.3vh;
+    }
+
+
+.scrollable-table {
+    flex: 1; /* Wype³nia pozosta³¹ przestrzeñ */
+    overflow-y: auto;
+    padding: 0.5vw; /* Padding wewnêtrzny */
+    max-height: 42vh;
+}
+.table-header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 kolumn */
+    background-color: white;
+    color: white;
+    font-size: 1vh;
+    font-weight: bold;
+    padding: 0.8vh;
+    border-bottom: 2px solid #ffff;
+    margin-bottom: 0.5vh;
+    text-align: center;
+}
+table {
+    width: 100%; /* Szerokoœæ tabeli */
+    border-collapse: collapse;
+}
+
+thead {
+    position: relative;
+    top: 0;
+    z-index: 2;
+    background-color: #ffffff21;
+    color: #ffffff;
+    font-size: 1.5vh; /* Rozmiar czcionki w vw */
+    border-radius: 5px;
+}
+tbody tr {
+    z-index: 1; /* Ni¿szy priorytet ni¿ nag³ówki */
+    position: relative;
+}
+th, td {
+    padding: 0.8vh; /* Padding w komórkach tabeli */
+    text-align: center;
+    border-bottom: 0.2vw solid #ffffff86; /* Linie w tabeli */
+}
+
+tbody tr:hover {
+    background-color: #ffffff2d;
+}
+
+/* Przyciski akcji */
+.edit-button, .delete-button {
+    background-color: #67f5f36a;
+    color: white;
+    border: none;
+    padding: 0.2vh 0.8vw; /* Padding w vw */
+    margin: 0 0.2vw; /* Marginesy w vw */
+    border-radius: 5px;
+    border: solid 2px white;
+    cursor: pointer;
+    font-size: 1.2vh; /* Rozmiar czcionki w vw */
+    transition: background-color 0.3s ease;
+}
+
+    .edit-button:hover {
+        background-color: #cd9b10;
+    }
+
+    .delete-button:hover {
+        background-color: #a83e3e;
+    }
+
+
+
+
+
+
+
+
+.small-widget h2 {
+    font-family: "Parisienne", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5vh;
+    color: white;
+    margin-bottom: 0.3vh;
+}
+
+
+.form-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.62vw;
+    justify-items: center;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+}
+
+    /* Stylizacja etykiet */
+    .form-group label {
+        font-size: 1.2vh;
+        margin-bottom: 5px;
+        color: #C0C0C0;
+    }
+
+    /* Stylizacja pól wejœciowych */
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 0.6vh;
+        font-size: 1.2vh;
+        border: 1px solid white;
+        border-radius: 5px;
+        background-color: #1c1c1c;
+        color: white;
+    }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            box-shadow: 0 0 5px white;
+        }
+
+/* Stylizacja przycisku */
+.add-button {
+    grid-column: 1 / -1; /* Przyciski zajmuj¹ ca³¹ szerokoœæ */
+    background-color: #67f5f36a;
+    color: white;
+    border: 2px solid white;
+    padding: 0.2vh 1vw;
+    font-size: 1.3vh;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .add-button.edit-mode {
+        background-color: #bd8e0a
+    }
+    .add-button.edit-mode:hover {
+        background-color: #bd8e0a7f
+    }
+    .add-button:hover {
+        background-color: #67f5f336;
+    }
+
+/* Responsywnoœæ */
+@media (max-width: 768px) {
+    .form-content {
+        grid-template-columns: 1fr; /* Uk³ad w jednej kolumnie na ma³ych ekranach */
+    }
+
+    .add-button {
+        width: 100%; /* Przyciski na ca³¹ szerokoœæ */
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+    gap:90px;
+    
+}
+
+.to-see {
+    height: 32vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.small-widget{
+    height: 24vh;
+}
+
+tbody td {
+    color: #ffffff; /* Wymuszony bia³y kolor */
+}
+input[type="date"] {
+    color: #ffffff;
+}
+footer {
+    position: relative; /* Wyrównanie wzglêdem rodzica */
+    bottom: 0;
+    width: 100%;
+    height: 3vh;
+    background: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    color: #ffffff;
+    padding-left: 50px;
+    box-sizing: border-box; /* Upewnij siê, ¿e padding nie zwiêksza wysokoœci */
+}

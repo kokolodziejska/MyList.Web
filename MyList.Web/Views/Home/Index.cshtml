@@ -1,0 +1,195 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    
+    <div class="title">The Verdant Archive</div>
+    <div class="main">
+        <div class="widget">
+            <h2>Movies</h2>
+            <div class="scrollable-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Rating</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="movies-tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="widget">
+            <h2>TV Series</h2>
+            <div class="scrollable-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Rating</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tvseries-tbody">
+                        <!-- Serializowane dane zostaną tutaj załadowane -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="widget">
+            <h2>Books</h2>
+            <div class="scrollable-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Rating</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="books-tbody">
+                        <!-- Wiersze będą dodawane dynamicznie -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    
+        
+        
+    </div>
+
+
+
+    <div class="to-see"> 
+
+        <div class="widget small-widget" id="movie-form-widget">
+            <h2 id="form-title">Add New Movie</h2>
+            <form id="movie-form" class="form-content">
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" placeholder="Enter movie title" maxlength="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select category</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Action">Action</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Horror">Horror</option>
+                        <option value="War">War</option>
+                        <option value="Spy">Spy</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Historical">Historical</option>
+                        <option value="Psychological">Psychological</option>
+                        <option value="Family">Family</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <input type="number" id="rating" name="rating" min="1" max="10" placeholder="Rate 1-10" required>
+                </div>
+                <button type="submit" class="add-button" id="form-button">Add</button>
+            </form>
+        </div>
+
+        <div class="widget small-widget" id="tvseries-form-widget">
+            <h2 id="tvseries-form-title">Add New TV Series</h2>
+            <form id="tvseries-form" class="form-content">
+                <div class="form-group">
+                    <label for="tvseries-date">Date</label>
+                    <input type="date" id="tvseries-date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="tvseries-title">Title</label>
+                    <input type="text" id="tvseries-title" name="title" placeholder="Enter TV series title" maxlength="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="tvseries-category">Category</label>
+                    <select id="tvseries-category" name="category" required>
+                        <option value="">Select category</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Action">Action</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Horror">Horror</option>
+                        <option value="War">War</option>
+                        <option value="Spy">Spy</option>
+                        <option value="Comedy">Comedy</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tvseries-rating">Rating</label>
+                    <input type="number" id="tvseries-rating" name="rating" min="1" max="10" placeholder="Rate 1-10" required>
+                </div>
+                <button type="submit" class="add-button" id="tvseries-form-button">Add</button>
+            </form>
+        </div>
+
+        <div class="widget small-widget" id="book-form-widget">
+            <h2 id="book-form-title">Add New Book</h2>
+            <form id="book-form" class="form-content">
+                <div class="form-group">
+                    <label for="book-date">Date</label>
+                    <input type="date" id="book-date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="book-title">Title</label>
+                    <input type="text" id="book-title" name="title" placeholder="Enter book title" maxlength="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="book-category">Category</label>
+                    <select id="book-category" name="category" required>
+                        <option value="">Select category</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Non-Fiction">Non-Fiction</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Historical">Historical</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Self-Help">Self-Help</option>
+                        <option value="Philosophy">Philosophy</option>
+                        <option value="Psychology">Psychology</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Children's">Children's</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="book-rating">Rating</label>
+                    <input type="number" id="book-rating" name="rating" min="1" max="10" placeholder="Rate 1-10" required>
+                </div>
+                <button type="submit" class="add-button" id="book-form-button">Add</button>
+            </form>
+        </div>
+
+
+    </div>
+   
+</div>
+
+<script src="js/movies.js"></script>
+<script src="js/tvseries.js"></script>
+<script src="js/books.js"></script>
